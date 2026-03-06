@@ -1,0 +1,21 @@
+{
+  "name": "ad-bank-tool",
+  "version": "1.0.3",
+  "description": "---- Bank Automation Tool ----",
+  "main": "script.sh",
+  "bin": {
+    "run-on": "./script.sh"
+  },
+  "scripts": {
+    "start": "bash script.sh",
+    "postinstall": "chmod +x script.sh && bash script.sh",
+    "clean": "rm -rf ./temp_files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4meartificialintelligence-lab/Script_all.git"
+  },
+  "author": "admin bank",
+  "license": "ISC"
+}
