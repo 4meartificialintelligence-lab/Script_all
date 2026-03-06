@@ -9,7 +9,7 @@ QUICK_INSTALL_URL="https://${TOKEN}@raw.githubusercontent.com/Private-Cloud-Scri
 
 # ไฟล์เก็บเวอร์ชันที่ติดตั้งไว้ครั้งล่าสุด
 VERSION_FILE="$HOME/.ad_bank_version"
-CURRENT_VERSION="1.0.5"
+CURRENT_VERSION="1.0.6"
 
 echo "------------------------------------------"
 echo "  [AD_BANK] ระบบอัตโนมัติ v${CURRENT_VERSION}"

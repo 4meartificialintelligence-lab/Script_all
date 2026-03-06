@@ -1,14 +1,14 @@
 {
   "name": "ad-bank-tool",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "---- Bank Automation Tool ----",
-  "main": "script.sh",
+  "main": "install.js",
   "bin": {
     "run-on": "./script.sh"
   },
   "scripts": {
     "start": "bash script.sh",
-    "postinstall": "chmod +x script.sh && bash script.sh",
+    "postinstall": "node install.js",
     "clean": "rm -rf ./temp_files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
