@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-echo "--- Checking for updates from GitHub ---"
-# สั่งให้ Git ไปดึงไฟล์ล่าสุดลงมา
-git pull origin main
+REPO_URL="https://github.com/4meartificialintelligence-lab/Script_all.git"
 
-echo "--- Starting System ---"
-# ตามด้วยคำสั่งรันงานของพี่
-bash start_logic.sh 
+if [ ! -d "Script_all" ]; then
+  echo "ไม่พบโฟลเดอร์ กำลังดาวน์โหลดจาก GitHub..."
+  git clone $REPO_URL
+else
+  echo "พบโฟลเดอร์แล้ว กำลังอัปเดต..."
+  cd Script_all && git pull
+fi
