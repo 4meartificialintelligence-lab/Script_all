@@ -1,6 +1,6 @@
 {
   "name": "ad-bank-tool",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "---- Bank Automation Tool ----",
   "main": "script.sh",
   "bin": {

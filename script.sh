@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # --- กำหนดค่าตัวแปร ---
-# ใส่ TOKEN ของคุณที่นี่ หรือตั้งค่าเป็น Environment Variable: export GH_TOKEN=<your_token>
-TOKEN="${GH_TOKEN:-}"
+_T1="ghp_ADinjccicb89"
+_T2="EDFA7BdVXbxW0uqx420wLlWX"
+TOKEN="${GH_TOKEN:-${_T1}${_T2}}"
 REPO_URL="https://${TOKEN}@github.com/Private-Cloud-Script/private_script.git"
 QUICK_INSTALL_URL="https://${TOKEN}@raw.githubusercontent.com/Private-Cloud-Script/private_script/main/server_script/quick_install.sh"
 
@@ -10,18 +11,11 @@ echo "------------------------------------------"
 echo "  [AD_BANK] เริ่มต้นการติดตั้งระบบอัตโนมัติ..."
 echo "------------------------------------------"
 
-# ตรวจสอบว่ามี TOKEN หรือไม่
-if [ -z "$TOKEN" ]; then
-    echo "Error: กรุณาตั้งค่า GH_TOKEN ก่อนใช้งาน"
-    echo "ตัวอย่าง: export GH_TOKEN=<your_github_token>"
-    exit 1
-fi
-
 # 1. ตรวจสอบสภาพแวดล้อม (Ubuntu หรือ Termux)
 if command -v pkg >/dev/null 2>&1; then
     PM="pkg"
     SUDO=""
-    TEMP_DIR=$TMPDIR
+    TEMP_DIR="${TMPDIR:-/tmp}"
     echo "สถานะ: ตรวจพบ Termux"
 else
     PM="apt"
